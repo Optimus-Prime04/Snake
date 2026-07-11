@@ -1,6 +1,10 @@
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+
 const scoreText = document.getElementById("score");
 
 const box = 20;
