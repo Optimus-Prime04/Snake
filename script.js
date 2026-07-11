@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
 const scoreText = document.getElementById("score");
 
 const box = 20;
-const appleSize = 24;
+const appleSize = 25;
 const rows = canvas.width / box;
 const appleImg = new Image();
 appleImg.src = "assets/apple.png";
