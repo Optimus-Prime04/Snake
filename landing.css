@@ -1,0 +1,232 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+/* Background Video */
+
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-3;
+}
+
+/* Dark Overlay */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.60);
+    backdrop-filter:blur(2px);
+    z-index:-2;
+}
+
+/* Hero Section */
+
+.hero{
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+}
+
+/* Title */
+
+.title{
+    font-size:5rem;
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    text-shadow:
+        0 0 10px #00ff88,
+        0 0 30px #00ff88,
+        0 0 60px #00ff88;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+/* Subtitle */
+
+.subtitle{
+    margin-top:20px;
+
+    font-size:1.3rem;
+
+    color:#ddd;
+
+    line-height:1.7;
+
+    animation:fadeUp 1.2s ease;
+}
+
+/* Button */
+
+.play-btn{
+
+    margin-top:45px;
+
+    padding:18px 60px;
+
+    border-radius:60px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    background:#00c853;
+
+    transition:.35s;
+
+    box-shadow:
+        0 0 20px rgba(0,255,136,.45);
+
+}
+
+.play-btn:hover{
+
+    transform:translateY(-5px) scale(1.06);
+
+    background:#00ff88;
+
+    color:#111;
+
+    box-shadow:
+        0 0 25px #00ff88,
+        0 0 60px #00ff88;
+
+}
+
+/* Credits */
+
+.credits{
+
+    position:absolute;
+
+    bottom:25px;
+
+    color:#bbb;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+}
+
+/* Floating Animation */
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* Fade Animation */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .title{
+
+        font-size:3rem;
+
+        letter-spacing:2px;
+
+    }
+
+    .subtitle{
+
+        font-size:1rem;
+
+    }
+
+    .play-btn{
+
+        padding:15px 45px;
+
+        font-size:1rem;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .title{
+
+        font-size:2.3rem;
+
+    }
+
+    .subtitle{
+
+        font-size:.9rem;
+
+    }
+
+    .credits{
+
+        font-size:.75rem;
+
+    }
+
+}
