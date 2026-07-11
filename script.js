@@ -4,6 +4,7 @@ const ctx = canvas.getContext("2d");
 const scoreText = document.getElementById("score");
 
 const box = 20;
+const appleSize = 24;
 const rows = canvas.width / box;
 const appleImg = new Image();
 appleImg.src = "assets/apple.png";
@@ -172,12 +173,9 @@ function update() {
 function draw() {
     ctx.fillStyle = "blue";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
 
-
-
-ctx.drawImage(
-    appleImg,
+    ctx.drawImage(
+        appleImg,
     food.x * box - (appleSize - box) / 2,
     food.y * box - (appleSize - box) / 2,
     appleSize,
